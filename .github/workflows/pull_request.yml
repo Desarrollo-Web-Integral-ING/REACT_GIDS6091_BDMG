@@ -10,5 +10,5 @@ jobs:
         run: |
           echo "Autor del PR: ${{ github.event.pull_request.user.login }}"
           echo "Título del PR: ${{ github.event.pull_request.title }}"
-          echo "Descripción: ${{ github.event.pull_request.url }}"
-          echo "Descripción: ${{ github.event.pull_request.head }}"
+          echo "URL: ${{ github.event.pull_request.url }}"
+          echo "ID: ${{ github.event.pull_request.id }}"
