@@ -1,0 +1,14 @@
+name: My First Push
+on:
+  pull_request:
+
+jobs:
+  Tarea1:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Datos del commit
+        run: |
+          echo "Autor del PR: ${{ github.event.pull_request.user.login }}"
+          echo "Título del PR: ${{ github.event.pull_request.title }}"
+          echo "Descripción: ${{ github.event.pull_request.url }}"
+          echo "Descripción: ${{ github.event.pull_request.head }}"
