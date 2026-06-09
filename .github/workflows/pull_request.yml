@@ -1,14 +1,16 @@
-name: My pull request
+name: Datos del Pull Request
 on:
   pull_request:
 
 jobs:
-  Tarea1:
+  mostrar-pr:
     runs-on: ubuntu-22.04
     steps:
-      - name: Datos del commit
+      - name: Datos del PR
         run: |
-          echo "Autor del PR: ${{ github.event.pull_request.user.login }}"
-          echo "Título del PR: ${{ github.event.pull_request.title }}"
-          echo "URL: ${{ github.event.pull_request.url }}"
-          echo "ID: ${{ github.event.pull_request.id }}"
+          echo "Destino (base): ${{ github.event.pull_request.base.ref }}"
+          echo "Origen (head): ${{ github.event.pull_request.head.ref }}"
+          echo "Título: ${{ github.event.pull_request.title }}"
+          echo "Contenido: ${{ github.event.pull_request.body }}"
+          echo "Estado: ${{ github.event.pull_request.state }}"
+          echo "¿Fusionado?: ${{ github.event.pull_request.merged }}"
