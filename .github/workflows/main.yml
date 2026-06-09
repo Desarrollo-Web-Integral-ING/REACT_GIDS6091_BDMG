@@ -9,3 +9,10 @@ jobs:
     steps:
       - name: Dí hola
         run: echo "Hello World Brayan"
+        
+  Tarea2:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: FechaSistema
+        run: date 
